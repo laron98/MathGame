@@ -52,8 +52,10 @@
 <body>
     <div id="container"> 
         <h2 id="greeting">Welcome to XAMPP Pals Math Game!</h2>
+	<div>
+	<ing src="MathGame.png" alt="Math Games">
         <div>
-        <img src="MathIcon.png" alt="Math Game">
+        <img src="MathIcon.png" alt="Math game img">
         </div>
         <form action="check_login.php" method = "post" id="form_id">
             <div id="message"></div>
