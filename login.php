@@ -11,7 +11,7 @@
     }
     .input_title{
         display: inline-block;
-        color: Red;
+        color: Blue;
         width: 70px;
     }
     #container{
@@ -32,7 +32,7 @@
 			height: 25px;
 	}
     body{
-			background-color: grey;
+			background-color: green;
 	}
     #message{
 			display:none;
@@ -51,7 +51,7 @@
 </head>
 <body>
     <div id="container"> 
-        <h2 id="greeting">Welcom to Math Game</h2>
+        <h2 id="greeting">Welcome to XAMPP Pals Math Game!</h2>
         <div>
         <img src="MathIcon.png" alt="UPS">
         </div>
