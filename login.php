@@ -53,7 +53,7 @@
     <div id="container"> 
         <h2 id="greeting">Welcom to Math Game</h2>
         <div>
-        <img src="UPS.png" alt="UPS">
+        <img src="MathIcon.png" alt="UPS">
         </div>
         <form action="check_login.php" method = "post" id="form_id">
             <div id="message"></div>
