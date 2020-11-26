@@ -31,7 +31,7 @@ function getData($file){
 function get_user_info($username, $flag = ACTIVEUSER){
     $user_info = getData(USERFILE);
     $res = array();
-    print_r($user_info);
+    //print_r($user_info);
     switch($flag){
         case ACTIVEUSER:
             $res = array_filter($user_info, function($v) use ($username){

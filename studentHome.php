@@ -52,5 +52,3 @@ body {
 <button type = "submit" id = "button2">Animal Safari!</button>
 </body> 
 </html>
-
-

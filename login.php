@@ -11,7 +11,7 @@
     }
     .input_title{
         display: inline-block;
-        color: Blue;
+        color: Maroon;
         width: 70px;
     }
     #container{
@@ -44,16 +44,14 @@
 			/* border: 1px solid; */
 			margin-left: 77px;
 		}
-
-
     
     </style>
 </head>
 <body>
     <div id="container"> 
+    <img src="MathGame.png" alt="Math Games">
+    <div>
         <h2 id="greeting">Welcome to XAMPP Pals Math Game!</h2>
-	<div>
-	<ing src="MathGame.png" alt="Math Games">
         <div>
         <img src="MathIcon.png" alt="Math game img">
         </div>
@@ -66,9 +64,7 @@
 		    <input type="password" name="pw" id="password" placeholder="Password" />
             <input type="submit" name="action_name" id="login" value="login" />
         </div>
-
     </form>
-
     
 </body>
 </html>
