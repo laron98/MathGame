@@ -32,7 +32,7 @@
 			height: 25px;
 	}
     body{
-			background-color: green;
+			background-color: navy;
 	}
     #message{
 			display:none;
