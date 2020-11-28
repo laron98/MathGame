@@ -32,7 +32,7 @@
 			height: 25px;
 	}
     body{
-			background-color: navy;
+			background-color: green;
 	}
     #message{
 			display:none;
@@ -62,6 +62,7 @@
             <br><br>
             <span class="input_title">Password:</span>
 		    <input type="password" name="pw" id="password" placeholder="Password" />
+           
             <input type="submit" name="action_name" id="login" value="login" />
         </div>
     </form>

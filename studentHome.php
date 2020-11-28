@@ -5,13 +5,6 @@
 body {
     background-color: paleturquoise;
 }
-#LogoutButton {
-	background-color: white;
-    border: solid 2px black;
-    color: black;
-    font-size: 15px;
-    padding: 16px;
-		
 #button1 {
     background-color: red;
     border: solid 2px cyan;
@@ -52,10 +45,16 @@ body {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<button type = "submit" id = "LogoutButton">Logout</button>
 <div id="container"> 
         <h1 id="greeting">What game would you like to play?</h1>
 	<div>
+    <button id="myButton" class="float-left submit-button" >Car Game</button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "mathGame.php/";
+    };
+</script>
 <button type = "submit" id = "button1">Car Race!</button>
 <button type = "submit" id = "button2">Animal Safari!</button>
 </body> 
