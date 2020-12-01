@@ -15,12 +15,12 @@ if($res===1){
 	/*Redirect browser*/
 	session_start(); 
     $_SESSION['$username'] = $username;
-	header("Location: studentHome.php/");
+	//header("Location: studentHome.php/");
 
 }elseif($res===2){
 	session_start(); 
     $_SESSION['$username'] = $username;
-	header("Location: teacherMainPage.php/");
+	//header("Location: teacherMainPage.php/");
 }else{
 	echo "Invaild username or password";
 
@@ -36,6 +36,12 @@ if($res===1){
 // function getPasswordByName
 function check_login($username, $pw){
 	$all_user = get_user_info($username);  //USERFILE is in Config/path to json file
+	$tempo = getData(USERFILE);
+	var_dump($all_user);
+	$tempo[$username]['carGameScore'] = 20;
+	writeData(USERFILE, $tempo);
+	var_dump($tempo);
+	//print($all_user[0]['carGameScore']);
 	if($all_user){
 		if($all_user[0]['password'] === $pw && $all_user[0]['user_type'] === 2){
 			return 1;
@@ -48,6 +54,8 @@ function check_login($username, $pw){
 	return 3;
 	
 }
+
+
 
 ?>
 

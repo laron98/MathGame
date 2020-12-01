@@ -45,17 +45,19 @@ body {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div id="container"> 
-        <h1 id="greeting">What game would you like to play?</h1>
-	<div>
-    <button id="myButton" class="float-left submit-button" >Car Game</button>
 
-<script type="text/javascript">
-    document.getElementById("myButton").onclick = function () {
-        location.href = "mathGame.php/";
-    };
-</script>
-<button type = "submit" id = "button1">Car Race!</button>
-<button type = "submit" id = "button2">Animal Safari!</button>
+
+<div id="container"> 
+     <h1 id="greeting">What game would you like to play?</h1>
+<div>
+<form action="../ASGame.php">
+    <input type="submit"/>
+    <button type = "submit" id = "button1">Car Race!</button>
+    
+    <button type = "submit" id = "button2">Animal Safari!</button>
+</form>
+
+
+
 </body> 
 </html>
