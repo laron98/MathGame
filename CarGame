@@ -14,7 +14,7 @@
         
         <nav>
             <form>
-                <input type="button" onclick="alert('Hello World!')" style="font-size:300%;" value="Start">
+                <input type="button" onclick="alert('I do not work yet')" style="font-size:300%;" value="Start">
             </form>
         </nav>
         <main>
