@@ -4,8 +4,6 @@
 
 <?php
 $Score = 0;
- 
- 
 $ArrEasyPlace = array('Tens','Ones');
 $ArrHardPlace = array('Hundredths','Tens','Ones');
 
@@ -14,7 +12,7 @@ $HardSet = rand(10,999);
 
 $Difficulty = 0;
 
-for ($x = 0; $x <= 10; $x++) {
+//for ($x = 0; $x <= 10; $x++) {
 $Counter = 0;
 
 if($Difficulty == 0){
@@ -25,6 +23,15 @@ if($Difficulty == 0){
 	echo $EasySet;
     echo "</p>";
     echo ("What Number is in the " . $TempPlace . " Place?");
+    echo "</p>";
+    ?>
+    
+    <form method="post" action="">
+	<input type="text" name="value">
+	<input type="submit">
+	</form>
+    
+    <?php
     echo $_POST['value'];
     
     if($TempNum == 0){
@@ -89,13 +96,8 @@ else{
         echo "</p>";
     }
 }
-}
+//}
 ?>
-
-<form method="post" action="">
-<input type="text" name="value">
-<input type="submit">
-</form>
 
 </body>
 </html>
