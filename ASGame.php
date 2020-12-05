@@ -5,6 +5,7 @@
 <?php
 $Score = 0;
  
+ 
 $ArrEasyPlace = array('Tens','Ones');
 $ArrHardPlace = array('Hundredths','Tens','Ones');
 
@@ -13,6 +14,7 @@ $HardSet = rand(10,999);
 
 $Difficulty = 0;
 
+for ($x = 0; $x <= 10; $x++) {
 if($Difficulty == 0){
 	$Answer = 0;
 	$TempNum = rand(0,1);
@@ -65,15 +67,15 @@ else{
     	$Score++;
     	echo "Correct!";
         echo "</p>";
-        echo "Your score is " . $Score . "/" . $Counter;
+        echo "Your score is " . $Score . "/" . $x;
     }
     else{
     	echo "Incorrect :(";
         echo "</p>";
-        echo "Your score is " . $Score . "/" . $Counter;
+        echo "Your score is " . $Score . "/" . $x;
     }
 }
-
+}
 ?>
 
 <form method="post" action="">
