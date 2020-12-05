@@ -15,6 +15,8 @@ $HardSet = rand(10,999);
 $Difficulty = 0;
 
 for ($x = 0; $x <= 10; $x++) {
+$Counter = 0;
+
 if($Difficulty == 0){
 	$Answer = 0;
 	$TempNum = rand(0,1);
@@ -34,14 +36,20 @@ if($Difficulty == 0){
     
     if($_POST == $Answer){
     	$Score++;
+        $Counter++;
+        echo "</p>";
     	echo "Correct!";
         echo "</p>";
         echo "Your score is " . $Score . "/" . $Counter;
+        echo "</p>";
     }
     else{
+    	$Counter++;
+    	echo "</p>";
     	echo "Incorrect :(";
         echo "</p>";
         echo "Your score is " . $Score . "/" . $Counter;
+        echo "</p>";
     }
     
 }
@@ -65,14 +73,20 @@ else{
     
     if($_POST == $Answer){
     	$Score++;
+        $Counter++;
+        echo "</p>";
     	echo "Correct!";
         echo "</p>";
-        echo "Your score is " . $Score . "/" . $x;
+        echo "Your score is " . $Score . "/" . $Counter;
+        echo "</p>";
     }
     else{
+    	$Counter++;
+    	echo "</p>";
     	echo "Incorrect :(";
         echo "</p>";
-        echo "Your score is " . $Score . "/" . $x;
+        echo "Your score is " . $Score . "/" . $Counter;
+        echo "</p>";
     }
 }
 }
