@@ -4,12 +4,6 @@
 
 <?php
 $Score = 0;
-
-$mynumber = 123;
-
-echo substr($mynumber, 1, 1);
- echo "</p>";
- 
  
 $ArrEasyPlace = array('Tens','Ones');
 $ArrHardPlace = array('Hundredths','Tens','Ones');
