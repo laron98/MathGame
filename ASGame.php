@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Safari Math Game</h1>
 
-<div style="background-image: url('SafariBackground.jpg');">
+<?php
+$ArrEasyPlace = array('Tens','Ones');
+$ArrHardPlace = array('Hundredths','Tens','Ones');
 
-<img src="Animal1.jpg" alt="Animal1" width="100" height="140">
-<img src="Animal2.jpg" alt="Animal2" width="100" height="140">
+$EasySet = rand(10,99);
+$HardSet = rand(10,999);
 
-<p>Which Animal has a ... in the ... place?</p>
-</div>
+$Difficulty = 0;
 
+if($Difficulty == 0){
+	$TempNum = rand(0,1);
+	$TempPlace = $ArrEasyPlace[$TempNum];
+	echo $EasySet;
+    echo "</p>";
+    echo ("What Number is in the " . $TempPlace . " Place?");
+}
+else{
+	$TempNum = rand(0,2);
+	$TempPlace = $ArrHardPlace[$TempNum];
+	echo $HardSet;
+    echo "</p>";
+    echo ("What Number is in the " . $TempPlace . " Place?");
+}
+
+?>
 
 </body>
 </html>
+
