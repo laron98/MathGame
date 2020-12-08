@@ -75,17 +75,57 @@ table, th, td {
 </head>
 <body>
 
+<?php
+function writeMsg() {
+  echo "Hello world!";
+}
+
+writeMsg(); // call the function
+?>
+
+<?php
+	function difficutlyCG(){
+    difficulty = 0;
+    if(isset($_POST['easy1'])) { 
+            return 0; 
+        } 
+        if(isset($_POST['hard1'])) { 
+            return 1; 
+        } 
+    return difficulty;
+    }
+    
+    function difficutlySG(){
+    difficulty = 0;
+    if(isset($_POST['easy2'])) { 
+            return 0; 
+        } 
+        if(isset($_POST['hard2'])) { 
+            return 1; 
+        } 
+    return difficulty;
+    }
+?> 
 
 <table style="width:100%">
   <tr>
     <th>Car Math Game</th>
-    <th><button>Easy</button></th> 
-    <th><button>Hard</button></th>
+    <th><form method="post"> 
+        <input type="submit" name="easy1"
+                value="Easy"/> 
+    </form></th> 
+    <th><form method="post"> 
+        <input type="submit" name="hard1"
+                value="Hard"/></th>
   </tr>
   <tr>
     <th>Safari Math Game</th>
-    <th><button>Easy</button></th> 
-    <th><button>Hard</button></th> 
+    <th><form method="post"> 
+        <input type="submit" name="easy2"
+                value="Easy"/></th> 
+    <th><form method="post"> 
+        <input type="submit" name="hard2"
+                value="Hard"/></th> 
   </tr>
   
 </table>
