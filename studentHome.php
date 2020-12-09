@@ -39,6 +39,7 @@ body {
         text-align: center;
         border: solid 10px mediumpurple;
     }
+    
 </style>
 <head>
     <meta charset="UTF-8">
@@ -50,10 +51,11 @@ body {
 <div id="container"> 
      <h1 id="greeting">What game would you like to play?</h1>
 <div>
-<form action="../ASGame.php">
-    <input type="submit"/>
-    <button type = "submit" id = "button1">Car Race!</button>
-    
+<form action="../CarGame.php">
+<button type = "submit" id = "button1">Car Race!</button>
+</form>
+
+<form action="../ASGame.php"> 
     <button type = "submit" id = "button2">Animal Safari!</button>
 </form>
 

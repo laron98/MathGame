@@ -20,7 +20,7 @@ if($res===1){
 }elseif($res===2){
 	session_start(); 
     $_SESSION['$username'] = $username;
-	header("Location: teacherMainPage.php/");
+	header("Location: TeacherPage.php/");
 }else{
 	echo "Invaild username or password";
 
