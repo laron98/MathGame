@@ -15,11 +15,11 @@
 
 <!DOCTYPE html>
 <html>
-<body>
+<body style="background-color:powderblue;">
 
 <button>Logout</button>
 
-<h1>Welcome to the Teacher Homepage</h1>
+<h1 style="text-align:center;">Welcome to the Teacher Homepage</h1>
 
 <h3>Student Data:</h3>
 
@@ -51,7 +51,7 @@ table, th, td {
     <td><?php 
     check_CGscore("alan") ?>
   </td>
-    <td>c<?php 
+    <td><?php 
     check_SGscore("alan") ?></td>
   </tr>
   <tr>
@@ -65,7 +65,7 @@ table, th, td {
     <td>Langston</td>
     <td><?php 
     check_CGscore("langston") ?></td>
-    <td>c<?php 
+    <td><?php 
     check_SGscore("langston") ?></td>
   </tr>
 </table>
