@@ -1,14 +1,17 @@
-function check_CGscore($username){
-	$tempo = getData(USERFILE);
-	print($tempo[$username]['carGameScore']);
-    }
-function check_SGscore($username){
-	$tempo = getData(USERFILE);
-	print($tempo[$username]['ASGameScore']);
-    }
-    
-// need to add function for difficulties
+<?php
+  include_once "files.php";
 
+  function check_CGscore($username){
+    $tempo = getData(USERFILE);
+      print($tempo[$username]['carGameScore']);
+    }
+
+  function check_SGscore($username){
+      $tempo = getData(USERFILE);
+      print($tempo[$username]['ASGameScore']);
+  }
+  
+?>
 
 <!DOCTYPE html>
 <html>
@@ -45,93 +48,27 @@ table, th, td {
   </tr>
   <tr>
     <td>Alan</td>
-    <td>check_CGscore(Alan)</td>
-    <td>check_SGscore(Alan)</td>
+    <td><?php 
+    check_CGscore("alan") ?>
+  </td>
+    <td>c<?php 
+    check_SGscore("alan") ?></td>
   </tr>
   <tr>
     <td>Max</td>
-    <td>check_CGscore(Max)</td>
-    <td>check_SGscore(Max)</td>
+    <td><?php 
+    check_CGscore("max") ?></td>
+    <td><?php 
+    check_SGscore("max") ?></td>
   </tr>
   <tr>
     <td>Langston</td>
-    <td>check_CGscore(Langston)</td>
-    <td>check_SGscore(Langston)</td>
+    <td><?php 
+    check_CGscore("langston") ?></td>
+    <td>c<?php 
+    check_SGscore("langston") ?></td>
   </tr>
 </table>
 
 </body>
 </html>
-
-<html>
-<body>
-
-<h3>Change Difficulty:</h3>
-</body>
-</html>
-
-
-</style>
-</head>
-<body>
-
-<?php
-function writeMsg() {
-  echo "Hello world!";
-}
-
-writeMsg(); // call the function
-?>
-
-<?php
-	function difficutlyCG(){
-    difficulty = 0;
-    if(isset($_POST['easy1'])) { 
-            return 0; 
-        } 
-        if(isset($_POST['hard1'])) { 
-            return 1; 
-        } 
-    return difficulty;
-    }
-    
-    function difficutlySG(){
-    difficulty = 0;
-    if(isset($_POST['easy2'])) { 
-            return 0; 
-        } 
-        if(isset($_POST['hard2'])) { 
-            return 1; 
-        } 
-    return difficulty;
-    }
-?> 
-
-<table style="width:100%">
-  <tr>
-    <th>Car Math Game</th>
-    <th><form method="post"> 
-        <input type="submit" name="easy1"
-                value="Easy"/> 
-    </form></th> 
-    <th><form method="post"> 
-        <input type="submit" name="hard1"
-                value="Hard"/></th>
-  </tr>
-  <tr>
-    <th>Safari Math Game</th>
-    <th><form method="post"> 
-        <input type="submit" name="easy2"
-                value="Easy"/></th> 
-    <th><form method="post"> 
-        <input type="submit" name="hard2"
-                value="Hard"/></th> 
-  </tr>
-  
-</table>
-
-</body>
-</html>
-
-
-<?php
