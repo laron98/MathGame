@@ -57,7 +57,7 @@ if($Difficulty == 0){
     
 	echo $EasySet;
     echo "</p>";
-    echo ("What Number is in the " . $TempPlace . " Place?");
+    echo "<h1 style="text-align:center;">What Number is in the $TempPlace Place?"</h1>";
     echo "</p>";
     ?>
     
