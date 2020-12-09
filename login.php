@@ -9,6 +9,7 @@
         padding: 0; 
         margin: 0;
     }
+    
     .input_title{
         display: inline-block;
         color: Maroon;
@@ -32,7 +33,11 @@
 			height: 25px;
 	}
     body{
-			background-color: green;
+			background-image: url("GameBackground.png");
+            background-size: 2500px 1000px;
+            background-repeat: no-repeat;
+            
+
 	}
     #message{
 			display:none;
@@ -44,10 +49,12 @@
 			/* border: 1px solid; */
 			margin-left: 77px;
 		}
+   
     
     </style>
 </head>
-<body>
+<body> 
+   
     <div id="container"> 
     <img src="MathGame.png" alt="Math Games">
     <div>
