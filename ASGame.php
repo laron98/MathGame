@@ -3,6 +3,31 @@
 <body>
 
 <?php
+	function difficutlyCG(){
+    print_r($_POST);
+    $difficulty = 0;
+    if(isset($_POST['easy1'])) { 
+            return 0; 
+        } 
+        if(isset($_POST['hard1'])) { 
+            return 1; 
+        } 
+    return $difficulty;
+    }
+    
+    function difficutlySG(){
+    $difficulty = 0;
+    if(isset($_POST['easy2'])) { 
+            return 0; 
+        } 
+        if(isset($_POST['hard2'])) { 
+            return 1; 
+        } 
+    return $difficulty;
+    }
+?> 
+<?php
+
 $Score = 0;
 $ArrEasyPlace = array('Tens','Ones');
 $ArrHardPlace = array('Hundredths','Tens','Ones');
@@ -12,10 +37,10 @@ $HardSet = rand(10,999);
 
 $Difficulty = 0;
 
-//for ($x = 0; $x <= 10; $x++) {
 $Counter = 0;
 
 if($Difficulty == 0){
+    print("hello");
 	$Answer = 0;
 	$TempNum = rand(0,1);
 	$TempPlace = $ArrEasyPlace[$TempNum];
@@ -26,13 +51,14 @@ if($Difficulty == 0){
     echo "</p>";
     ?>
     
-    <form method="post" action="">
-	<input type="text" name="value">
-	<input type="submit">
-	</form>
+    <form action = "SafariGame.php" method = "get">
+    Answer: <input type = "text" name = "ans"/>
+    <input type = "submit">
+    </form>
     
     <?php
-    echo $_POST['value'];
+    if (isset($_GET["ans"])){
+    $input = $_POST['ans'];
     
     if($TempNum == 0){
     	$Answer = substr($EasySet, 0, 0);
@@ -41,7 +67,7 @@ if($Difficulty == 0){
     	$Answer = substr($EasySet, 1, 1);
     }
     
-    if($_POST == $Answer){
+    if($input == $Answer){
     	$Score++;
         $Counter++;
         echo "</p>";
@@ -96,7 +122,7 @@ else{
         echo "</p>";
     }
 }
-//}
+}
 ?>
 
 </body>
