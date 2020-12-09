@@ -40,8 +40,7 @@ $Difficulty = 0;
 $Counter = 0;
 
 if($Difficulty == 0){
-    print("hello");
-	$Answer = 0;
+	//$Answer = 0;
 	$TempNum = rand(0,1);
 	$TempPlace = $ArrEasyPlace[$TempNum];
     
@@ -58,7 +57,7 @@ if($Difficulty == 0){
     
     <?php
     if (isset($_GET["ans"])){
-    $input = $_POST['ans'];
+    $input = $_GET['ans'];
     
     if($TempNum == 0){
     	$Answer = substr($EasySet, 0, 0);
