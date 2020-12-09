@@ -15,6 +15,7 @@
         <nav>
             
         </nav>
+
         <main>
             <?php 
                 $correct = 0;
@@ -48,7 +49,7 @@
                     $ans = $_GET["ans"]; 
                     echo $ans;
                     $ansArray = array();
-                    if($sum == ($ans(integer))){
+                    if($sum == $ans){
                         echo "<h3> $ans correct </h3>";
                         $correct = $correct + 1;
                         $ansArray [$question] = "$ans correct";
@@ -61,7 +62,6 @@
                         $question = $question + 1;
                         echo $question;
                     }
-
                 }
                 // var_dump($ansArray);
             ?>
