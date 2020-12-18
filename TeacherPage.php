@@ -69,6 +69,62 @@ table, th, td {
     check_SGscore("langston") ?></td>
   </tr>
 </table>
+  
+  <table style="width:100%">
+  <tr>
+    <th>Change Difficulty</th>
+    <td>
+        <input type="submit" name="easy" id="easy"
+                value="Easy"/> 
+  </td> 
+    <td>
+        <input type="submit" name="hard" id ="hard"
+                value="Hard"/></td>
+  </tr>
+  <table>
+  
+  
+  
+  <script src="base.js"></script>
+<script>
+    var btn2 = document.getElementById("easy")
+    btn2.onclick = function (){
+      $ajax({
+					method: 'post',
+					url: 'SafariGame.php',
+					data: {'difficult': 0, 'game': "Game"},
+					success: function(result){
+            console.log(result)
+						// var res = JSON.parse(result)
+						// console.log(res)
+					}
+				}
+				)
+
+    }
+</script>
+
+
+
+  
+  <script src="base.js"></script>
+<script>
+    var btn2 = document.getElementById("hard")
+    btn2.onclick = function (){
+      $ajax({
+					method: 'post',
+					url: 'SafariGame.php',
+					data: {'difficult': 1, 'game': "Game"},
+					success: function(result){
+            console.log(result)
+						// var res = JSON.parse(result)
+						// console.log(res)
+					}
+				}
+				)
+
+    }
+</script>
 
 </body>
 </html>
