@@ -14,30 +14,13 @@
 </head>
 
 <?php
-	function difficutlyCG(){
-    print_r($_POST);
-    $difficulty = 0;
-    if(isset($_POST['easy1'])) { 
-            return 0; 
-        } 
-        if(isset($_POST['hard1'])) { 
-            return 1; 
-        } 
-    return $difficulty;
-    }
-    
-    function difficutlySG(){
-    $difficulty = 0;
-    if(isset($_POST['easy2'])) { 
-            return 0; 
-        } 
-        if(isset($_POST['hard2'])) { 
-            return 1; 
-        } 
-    return $difficulty;
-    }
-?> 
-<?php
+$jsonFileContents = file_get_contents("difficult.json");
+
+$array = json_decode($jsonFileContents, true);
+
+$Difficulty = $array['Game'];
+?>
+
 
 $Score = 0;
 $ArrEasyPlace = array('Tens','Ones');
@@ -45,8 +28,6 @@ $ArrHardPlace = array('Hundredths','Tens','Ones');
 
 $EasySet = rand(10,99);
 $HardSet = rand(10,999);
-
-$Difficulty = 0;
 
 $Counter = 0;
 
