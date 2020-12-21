@@ -75,7 +75,9 @@
                 // var_dump($ansArray);
             ?>
         </main>
-
+        <button onclick="history.go(-1)"> 
+        Click here to go back 
+    </button> 
         <footer>
             <script>
                 function reset1(){
@@ -123,5 +125,10 @@
             <input type=button onClick=reset1() value='Reset'> //-->
             <div id='msg'></div>
         </footer>
+
+
+         
     </body>
+
+    
 </html>

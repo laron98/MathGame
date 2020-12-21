@@ -14,13 +14,30 @@
 </head>
 
 <?php
-$jsonFileContents = file_get_contents("difficult.json");
-
-$array = json_decode($jsonFileContents, true);
-
-$Difficulty = $array['Game'];
-?>
-
+	function difficutlyCG(){
+    print_r($_POST);
+    $difficulty = 0;
+    if(isset($_POST['easy1'])) { 
+            return 0; 
+        } 
+        if(isset($_POST['hard1'])) { 
+            return 1; 
+        } 
+    return $difficulty;
+    }
+    
+    function difficutlySG(){
+    $difficulty = 0;
+    if(isset($_POST['easy2'])) { 
+            return 0; 
+        } 
+        if(isset($_POST['hard2'])) { 
+            return 1; 
+        } 
+    return $difficulty;
+    }
+?> 
+<?php
 
 $Score = 0;
 $ArrEasyPlace = array('Tens','Ones');
@@ -29,21 +46,23 @@ $ArrHardPlace = array('Hundredths','Tens','Ones');
 $EasySet = rand(10,99);
 $HardSet = rand(10,999);
 
+$Difficulty = 0;
+
 $Counter = 0;
 
 if($Difficulty == 0){
 	//$Answer = 0;
 	$TempNum = rand(0,1);
 	$TempPlace = $ArrEasyPlace[$TempNum];
-    
-	echo $EasySet;
     echo "</p>";
-    echo "<h1 style="text-align:center;">What Number is in the $TempPlace Place?"</h1>";
+    echo "<h1>$EasySet</h1>";
+    echo "</p>";
+    echo "<h2>What Number is in the $TempPlace Place?</h2>";
     echo "</p>";
     ?>
     
     <form action = "SafariGame.php" method = "get">
-    Answer: <input type = "text" name = "ans"/>
+    Answer: <input type = "number" name = "ans"/>
     <input type = "submit">
     </form>
     
@@ -115,6 +134,8 @@ else{
 }
 }
 ?>
-
+<button onclick="history.go(-1)"> 
+        Click here to go back 
+    </button> 
 </body>
 </html>
